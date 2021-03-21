@@ -1,0 +1,12 @@
+  //    Задача №2
+  //    Необходимо вывести все положительные степени числа 5 которые меньше 10000, вывести результат возведения в степень.
+public class HomeWork {
+    public static void main(String[] args) {
+        int a = 1;
+        for (int i = 1; i < 10000; i *= 5) {
+            a *= 5;
+            if (a < 10000)
+                System.out.println(a);
+        }
+    }
+}
