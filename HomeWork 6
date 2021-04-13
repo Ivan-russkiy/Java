@@ -1,0 +1,99 @@
+//Задача № 6/1 Дана строка:
+  //      String s = “Перестановочный алгоритм быстрого действия”;
+    //    необходимо вывести все буквы “о” из этой строки.
+      //  Для указанной строки ответ будет “ооооо” (или в столбик)
+/*public class HomeWork {
+    public static void main(String[] args) {
+        String s = "Перестановочный алгоритм быстрого действия";
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == 'о') { // вводим букву "о" из кирилицы
+                System.out.println('о');
+
+            }
+        }
+    }
+}*/
+---------------------------------------------------------------------
+///Задача №6/2
+
+      //  Дана строка:
+       // String s = “Перевыборы выбранного президента”;
+       // необходимо подсчитать количество букв “е” в строке.
+       // Для указанной строки ответ будет 4.
+
+/*public class HomeWork {
+    public static void main(String[] args) {
+    String s = "Перевыборы выбранного президента";
+
+    int count = 0;
+    for (int i = 0; i < s.length(); i++) {
+        if (s.charAt(i) == 'е') {
+            count++;
+
+
+        }
+
+    }
+        System.out.println(count);
+    }
+}*/
+----------------------------------------------------------------------------
+//Задача №6/3
+
+  //      Дана строка:
+    //    String s = “Посмотрите как Рите нравится ритм”;
+      //  необходимо вывести индексы начала всех подстрок - “рит”, независимо от регистра.
+        //Для указанной строки ответ будет 6, 15, 29.
+
+/*public class HomeWork {
+    public static void main(String[]args) {
+        String s = "Посмотрите как Рите нравится ритм";
+
+        //String substr = "рит";
+        //for (int i = 0; i < s.length() - substr.length(); i++) {
+         //   if (substr.equalsIgnoreCase(s.substring(i, i + substr.length()))) {
+         //       System.out.println(i);
+         //   }
+       // }
+        String str = s.toLowerCase();
+        String substr = "рит";
+
+        int index = str.indexOf(substr);
+        while (index != -1) {
+            System.out.println(index);
+            index = str.indexOf(substr, index + 1);
+        }
+
+    }
+}*/
+-------------------------------------------------------------
+//Экстра задача
+
+  //      Дан массив:
+    //    String[][] array = {{“Привет”, “всем”, “кто”}, {“изучает”, “язык”, “программирования”}, {“java”}};
+      //  необходимо подсчитать количество строк в массиве, которые не содержат буквы “е”.
+
+public class HomeWork {
+    public static void main(String[] args) {
+        String[][] array = {{"Привет", "всем", "кто"}, {"изучает", "язык", "программирования"}, {"java"}};
+
+        for (int i =0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j ++) {
+
+               // boolean noE = true;
+              //  for (int k = 0; k < array[i][j].length(); k++) {
+                 //   if (array[i][j].charAt(k) == 'е') {
+                 //       noE = false;
+               //     }
+               //   }
+               //   if (noE){
+              //        System.out.println(array[i][j]);
+                    if(array[i][j].indexOf('е') == -1) {
+                        System.out.println(array[i][j]);
+                }
+            }
+        }
+
+
+    }
+}
